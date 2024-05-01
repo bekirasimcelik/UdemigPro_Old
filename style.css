@@ -1,0 +1,62 @@
+/* Hepsinin özelliklerini sıfırla */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    /*gölgeleme*/
+    background: linear-gradient(rgba(5,5,30,0.2), rgba(5,5,30,0.5)), url(images/background2.jpeg);
+    min-height: 100vh;
+    /* resmi hizalama */
+    background-position: center;
+    /* Olduğun ekranın boyutu kadar yer kapla */
+    background-size: cover;
+    /* Eğer bir elemanı diğer elemanın üzerine getirmek istiyorsak (normalde içiçe olmayacaklar) arkadakinin pozisyonuna relative deriz getirmek istediğimize ise absolute deriz. Absolute içinde olmadığım halde bir elemanın üzerine geleceğim demek. */
+    position: relative;
+}
+
+nav {
+    /* içindeki elemanları yanyana getirir*/
+    display: flex;
+    padding: 10px;
+    /*yatay hizalama*/
+    justify-content: space-between; /* Hepsini eşit aralıkla sağa sola yasla*/
+    /* dikey olarak ortalamak için*/
+    align-items: center;
+}
+
+/*Nav ın içindeki a nın içindeki img etiketini seçiyoruz*/
+nav a img {
+    width: 150px;
+}
+
+.nav-links {
+    /* Yukarıda display flex özelliğini aktif etmiştik. Şimdi diyelimki 3 tane element var. Biz içinden  birine 1 dersek bu şu demek:
+    kalanlar oldukları kadar yer kaplasın, geri kalan bütün alanı 1 verdiğimiz elemente ayır. Şöyle de kullanabiliriz:
+    bir tanesine %25, diğerine %25 son kalana da %50 de verebiliriz. Bu şekilde yüzdelikleri kadar yer kaplayacaktır.*/
+    flex: 1;
+    text-align: right;
+}
+
+nav div ul {
+    /* Liste öğelerinin başında yer alan noktaları silmek için kullanılır */
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    /* Eğer yer yoksa elemanlar alta gelsin demek için wrapping*/
+    flex-wrap: wrap;
+
+}
+
+nav div li {
+    /* Kaydırmak için kulanılabilecek bazı yönyemler direction, flex-direction, float, justfy content kullanılır*/
+    padding: 10px;
+}
+
+nav div ul li a {
+    /* Kelimelerin altındaki çizgiyi kaldırmak için*/
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
