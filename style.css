@@ -56,7 +56,7 @@ nav div li {
 nav div ul li a {
     /* Kelimelerin altındaki çizgiyi kaldırmak için*/
     text-decoration: none;
-    font-size: 15px;
+    font-size: 25px;
     color: white;
 }
 
@@ -113,7 +113,7 @@ nav div ul li a:hover::after {
 
 .text-box p {
     margin: 10px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .hero-btn {
@@ -125,6 +125,7 @@ nav div ul li a:hover::after {
     /* Bu elemanın kapsayıcısı büyüsün istiyorsak aşağıdakini kullanırız. */
     display: inline-block;
     text-decoration: none;
+    font-size: 25px;
 }
 
 .hero-btn:hover {
@@ -172,10 +173,6 @@ section p {
 
 selection h3 {
     margin: 10px 0px;
-}
-
-.course-col {
-    background-color: hotpink;
 }
 
 .course-col:hover {
@@ -229,6 +226,7 @@ selection h3 {
 .library-col {
     text-align: left;
     padding: 0;
+    cursor: pointer;
 }
 
 .library-col img {
